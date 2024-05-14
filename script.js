@@ -5,8 +5,14 @@ function submitValues() {
     var songC = new Audio ('Musics/uhhu uhhu.mp3')
     var songD = new Audio ('Musics/eyiKiSeOpin.mp3')
     var songE = new Audio ('Musics/ayeETibaje.mp3')
+    
 
-    if (score >= 75 && score <= 100) {
+    if (score === ''){
+        showResult.style.color = "black";
+        showResult.innerHTML= 'Invalid Input';
+    }
+
+    else if (score >= 75 && score <= 100) {
         showResult.style.color = "black";
         // console.log('A');
         showResult.innerHTML = '<strong>A - Excellent 🙌 </strong><br><span style="color:grey" >Keep up the effort</span>';
@@ -36,11 +42,6 @@ function submitValues() {
         showResult.innerHTML = '<strong>E - Poor 🤦‍♂️😭 </strong><br><span style="color:grey" >Wasted Efforts</span>';
         songE.play();
     }
-
-    else if (score === ''(score)){
-        showResult.innerHTML= 'Invalid Input';
-    }
-        input.value =''
 }
 
 function reloadPage() {
